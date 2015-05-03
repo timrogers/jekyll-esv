@@ -1,7 +1,7 @@
 require 'uri'
 
-module Jekyll
-  class EsvTag < Liquid::Tag
+module JekyllEsvTag
+  class Tag < Liquid::Tag
     URL_ROOT = "http://esvbible.org/".freeze
 
     def initialize(tag_name, text, tokens)
@@ -15,4 +15,4 @@ module Jekyll
   end
 end
 
-Liquid::Template.register_tag('esv', Jekyll::EsvTag)
+Liquid::Template.register_tag('esv', JekyllEsvTag::Tag)
